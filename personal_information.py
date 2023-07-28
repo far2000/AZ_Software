@@ -71,9 +71,9 @@ def get_phone_number():
 
 def appearance_information():
     try:
-        hight = isinstance(input("please enter your hight in integer: "), int)
+        hight = int(input("please enter your hight in cm\prefer not to say: "))
     except:
-        return None
+        return "prefer not to say"
     
     hair_colour = input("please enter your hair colour (black\ brown\ yellow\ others): ")
     if hair_colour == "black":
@@ -102,14 +102,14 @@ def appearance_information():
         eye_colour = "prefer not to say"
     
     skin_colour = input("please enter your skin colour (black\white\yellow\others): ")
-    if skin_colour != "black" or skin_colour != "white" or skin_colour != "yellow" or skin_colour != "others":
+    if skin_colour != "black" and skin_colour != "white" and skin_colour != "yellow" and skin_colour != "others":
         skin_colour = "prefer not to say"
     
     return (f"hight: {hight}", f"skin colour: {skin_colour}", f"hair colour: {hair_colour}", f"hair colour: {eye_colour}")
 
 def print_information(name, last_name, phone_number, email_address, 
                       address, gender, job, degree, age, appearance):
-    print(f"name: {name}\nlast name: {last_name}\nage: {age}\ngender: {gender}\nphone number: {phone_number}\n email address: {email_address}\naddress: {address}\njob: {job}\ndegree: {degree}" )
+    print(f"name: {name}\nlast name: {last_name}\nage: {age}\ngender: {gender}\nphone number: {phone_number}\nemail address: {email_address}\naddress: {address}\njob: {job}\ndegree: {degree}" )
     for i in appearance:
         print(i)
 

@@ -60,10 +60,10 @@ def degree_check():
 
 def get_age():
     try:
-        age = isinstance(input("please enter your age in integer: "), int)
+        age = int(input("please enter your age in integer\ prefer not to say: "))
         return age
     except:
-        return None
+        return "prefer not to say"
 
 def get_phone_number():
     phone_number = input("please enter your phone number: ")

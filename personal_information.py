@@ -29,6 +29,10 @@ def gender_check():
     else:
         return None
 
+def get_job():
+    job = input("please enter your job: ")
+    return job
+
 def main():
     name = get_name()
     last_name = get_last_name()
@@ -36,7 +40,7 @@ def main():
     email_address = get_email_address()
     address = get_address()
     gender = gender_check()
-    job = input("please enter your job; ")
+    job = get_job()
     degree = input("please enter your degree (Associate\ Bachelor's\ Graduate\ Professional): ")
     age = input("please enter your age (integer): ")
     appearance = ""

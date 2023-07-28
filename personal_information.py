@@ -49,6 +49,14 @@ def degree_check():
     else:
         return None
 
+def get_age():
+    try:
+        age = isinstance(input("please enter your age in integer: "), int)
+        return age
+    except:
+        return None
+
+
 def main():
     name = get_name()
     last_name = get_last_name()
@@ -58,7 +66,7 @@ def main():
     gender = gender_check()
     job = get_job()
     degree = degree_check()
-    age = input("please enter your age (integer): ")
+    age = get_age()
     appearance = ""
 
 if __name__ == "__main__":

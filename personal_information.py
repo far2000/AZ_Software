@@ -61,6 +61,11 @@ def get_phone_number():
     return phone_number
 
 def appearance_information():
+    try:
+        hight = isinstance(input("please enter your hight in integer: "), int)
+    except:
+        return None
+    
     hair_colour = input("please enter your hair colour (black\ brown\ yellow\ others): ")
     if hair_colour == "black":
         hair_colour = "black"
@@ -87,30 +92,34 @@ def appearance_information():
     else:
         eye_colour = "prefer not to say"
     
-    hight = input("please enter your hight in cm: ")
-    try:
-        hight = isinstance(input("please enter your age in integer: "), int)
-    except:
-        return None
-    
     skin_colour = input("please enter your skin colour (black\white\yellow\others): ")
     if skin_colour != "black" or skin_colour != "white" or skin_colour != "yellow" or skin_colour != "others":
         skin_colour = "prefer not to say"
     
-    return ("skin colour is " + skin_colour ,"hight is " + hight ,"hair colour is " + hair_colour,"hair colour is " + eye_colour)
+    return (f"hight: {hight}", f"skin colour: {skin_colour}", f"hair colour: {hair_colour}", f"hair colour: {eye_colour}")
+
+def print_information(name, last_name, phone_number, email_address, 
+                      address, gender, job, degree, age, appearance):
+    print(f"name: {name}\nlast name: {last_name}\nage: {age}\ngender: {gender}\nphone number: {phone_number}\n email address: {email_address}\naddress: {address}\njob: {job}\ndegree: {degree}" )
+    for i in appearance:
+        print(i)
+
+
 
 
 def main():
     name = get_name()
     last_name = get_last_name()
+    age = get_age()
+    gender = gender_check()
     phone_number = get_phone_number()
     email_address = get_email_address()
     address = get_address()
-    gender = gender_check()
     job = get_job()
     degree = degree_check()
-    age = get_age()
     appearance = appearance_information()
+    print_information(name, last_name, phone_number, email_address, 
+                      address, gender, job, degree, age, appearance)
 
 if __name__ == "__main__":
     main()

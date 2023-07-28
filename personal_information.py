@@ -12,3 +12,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def name():
+    name = input("please enter your name: ")
+    return name
+

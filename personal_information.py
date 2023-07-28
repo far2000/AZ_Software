@@ -1,16 +1,25 @@
+import re
+
+
 def get_name():
     name = input("please enter your name: ")
     return name
-
-
 
 def get_last_name():
     last_name = input ("please enter your last name: ")
     return last_name
 
 def get_email_address():
-    email_address = input("please enter your email address: ")
-    return email_address
+    return email_validate( input("please enter your email address: "))
+     
+
+def email_validate(email):
+    regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
+    if re.fullmatch(regex, email):
+      return email
+    else:
+      return "invalid email address"
+
 
 def get_address():
     address = input ("please enter your address: ")

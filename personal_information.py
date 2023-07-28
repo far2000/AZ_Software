@@ -87,7 +87,18 @@ def appearance_information():
     else:
         eye_colour = "prefer not to say"
     
-    return ("hair colour is " + hair_colour,"hair colour is " + eye_colour)
+    hight = input("please enter your hight in cm: ")
+    try:
+        hight = isinstance(input("please enter your age in integer: "), int)
+    except:
+        return None
+    
+    skin_colour = input("please enter your skin colour (black\white\yellow\others): ")
+    if skin_colour != "black" or skin_colour != "white" or skin_colour != "yellow" or skin_colour != "others":
+        skin_colour = "prefer not to say"
+    
+    return ("skin colour is " + skin_colour ,"hight is " + hight ,"hair colour is " + hair_colour,"hair colour is " + eye_colour)
+
 
 def main():
     name = get_name()

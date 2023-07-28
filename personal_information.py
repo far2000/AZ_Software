@@ -33,6 +33,22 @@ def get_job():
     job = input("please enter your job: ")
     return job
 
+def degree_check():
+    degree = input("please enter your degree (Associate\ Bachelor's\ Graduate\ Professional\ no degree): ")
+
+    if degree == "Associate":
+        return "Associate"
+    elif degree == " Bachelor's":
+        return " Bachelor's"
+    elif degree == "Graduate":
+        return "Graduate"
+    elif degree == "Professional":
+        return "Professional"
+    elif degree == "no degree":
+        return "no degree"
+    else:
+        return None
+
 def main():
     name = get_name()
     last_name = get_last_name()
@@ -41,7 +57,7 @@ def main():
     address = get_address()
     gender = gender_check()
     job = get_job()
-    degree = input("please enter your degree (Associate\ Bachelor's\ Graduate\ Professional): ")
+    degree = degree_check()
     age = input("please enter your age (integer): ")
     appearance = ""
 

@@ -56,11 +56,15 @@ def get_age():
     except:
         return None
 
+def get_phone_number():
+    phone_number = input("please enter your phone number: ")
+    return phone_number
+
 
 def main():
     name = get_name()
     last_name = get_last_name()
-    phone_number = input("please enter your phonr number: ")
+    phone_number = get_phone_number()
     email_address = get_email_address()
     address = get_address()
     gender = gender_check()

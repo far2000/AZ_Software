@@ -1,6 +1,17 @@
-def main():
+def get_name():
     name = input("please enter your name: ")
-    last_name = input("please enter your last name: ")
+    return name
+
+
+
+def get_last_name():
+    last_name = input ("please enter your lasr name: ")
+    return last_name
+
+
+def main():
+    name = get_name()
+    last_name = get_last_name()
     phone_number = input("please enter your phonr number: ")
     email_address = input("please enter your email address: ")
     address = input("please enter your address: ")
@@ -12,8 +23,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-def name():
-    name = input("please enter your name: ")
-    return name
 
